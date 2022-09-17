@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ChatClient.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewModels="clr-namespace:ChatClient.ViewModels">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25"
+            VerticalOptions="Center">
+
+            <ListView>
+                <ListView.ItemsSource>
+                    <Binding>
+                        <Binding.Path>Messages</Binding.Path>
+                    </Binding>
+                </ListView.ItemsSource>
+            </ListView>
+
+            <Entry
+                x:Name="myChatMessage"
+                FontSize="18"
+                HorizontalOptions="Center"
+                Placeholder="Type your message" />
+
+            <!--  <Button  -->
+            <!--  Clicked="OnCounterClicked"  -->
+            <!--  HorizontalOptions="Center"  -->
+            <!--  Text="Send"  -->
+            <!--  x:Name="sendButton" />  -->
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
